@@ -1,0 +1,107 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+    
+}
+
+
+.center{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-evenly;
+
+}
+
+.infomagem .logo{
+    max-width: 350px;
+    filter: invert(1);
+    margin-bottom: 80px;
+
+}
+
+.infomagem .description{
+   width: 49%;
+   font-size: 24px;
+   color: #ffffff;
+   line-height: 30px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.btn .buttons{
+    background-color: #ffffff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-color: #ffffff;
+    
+}
+
+.btn .buttons.select{
+    background-color: #1d8346;
+}
+
+.side{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    filter: invert(1);
+}
+
+.side ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.side .icon{
+    width: 30px;
+    transition: 0.3s ease-in-out;
+}
+
+.side .icon:hover{
+    transform: scale(1.2);
+}
+
+.carrossel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.carrossel .imagem{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+    animation: mudarImagem 0.7s;
+}
+
+.carrossel .imagem.ativa{
+    display: block;
+}
+
+@keyframes mudarImagem {
+    from{
+        opacity: 0.85;
+    }
+    to{
+        opacity: 1;
+    }
+}
